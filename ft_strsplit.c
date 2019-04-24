@@ -6,13 +6,12 @@
 /*   By: thallot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 09:46:00 by thallot           #+#    #+#             */
-/*   Updated: 2019/04/08 15:43:13 by thallot          ###   ########.fr       */
+/*   Updated: 2019/04/19 17:30:50 by thallot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 static int	ft_isword(char before, char current, char c)
 {

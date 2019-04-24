@@ -6,7 +6,7 @@
 /*   By: thallot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 13:57:44 by thallot           #+#    #+#             */
-/*   Updated: 2019/04/09 14:23:02 by thallot          ###   ########.fr       */
+/*   Updated: 2019/04/19 17:30:25 by thallot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	if (!lst)
+	if (!lst || !f)
 		return ;
 	while (lst)
 	{

@@ -6,7 +6,7 @@
 /*   By: thallot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 11:20:39 by thallot           #+#    #+#             */
-/*   Updated: 2019/04/08 13:30:09 by thallot          ###   ########.fr       */
+/*   Updated: 2019/04/19 17:38:57 by thallot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[len_dst + i] = src[i];
 		i++;
 	}
-	dst[len_dst + i] = '\0';
+	dst[i + len_dst] = '\0';
 	return (len_dst + len_src);
 }

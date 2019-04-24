@@ -6,7 +6,7 @@
 /*   By: thallot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 10:30:57 by thallot           #+#    #+#             */
-/*   Updated: 2019/04/08 14:55:19 by thallot          ###   ########.fr       */
+/*   Updated: 2019/04/19 17:31:06 by thallot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	size_t	size;
 
 	str = NULL;
-	if (s)
+	if (s && f)
 	{
 		i = 0;
 		size = ft_strlen(s);

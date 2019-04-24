@@ -6,7 +6,7 @@
 /*   By: thallot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 13:35:33 by thallot           #+#    #+#             */
-/*   Updated: 2019/04/18 11:11:31 by thallot          ###   ########.fr       */
+/*   Updated: 2019/04/19 11:01:34 by thallot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ typedef struct	s_list
 	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
+
 char			*ft_strncpy(char *dst, const char *src, size_t len);
 char			*ft_strncat(char *s1, const char *s2, size_t n);
 size_t			ft_strlen(const char *s);
@@ -72,9 +73,8 @@ void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr(int i);
 void			ft_putnbr_fd(int i, int fd);
 void			ft_putnstr(char *s, int n);
-void			ft_putstr(const char *str);
+void			ft_putstr(char const *str);
 char			**ft_strsplit(char const *s, char c);
-char			*ft_strtrim(char const *s);
 void			ft_putstr_fd(char const *s, int fd);
 t_list			*ft_lstnew(void const *content, size_t content_size);
 void			ft_print_list(t_list *list);

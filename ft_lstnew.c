@@ -6,7 +6,7 @@
 /*   By: thallot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 16:18:21 by thallot           #+#    #+#             */
-/*   Updated: 2019/04/08 16:54:39 by thallot          ###   ########.fr       */
+/*   Updated: 2019/04/19 17:54:19 by thallot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		if (!(list->content = ft_memalloc(content_size)))
+		{
+			free(list);
 			return (NULL);
+		}
 		list->content = ft_memcpy(list->content, content, content_size);
 		list->content_size = content_size;
 	}
