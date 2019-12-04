@@ -6,7 +6,7 @@
 #    By: thallot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/03 14:51:59 by thallot           #+#    #+#              #
-#    Updated: 2019/04/09 15:41:31 by thallot          ###   ########.fr        #
+#    Updated: 2019/12/04 09:42:57 by thallot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -98,10 +98,11 @@ SRC= ft_memset.c \
 	 ft_sqrt.c \
 	 ft_is_prime.c
 
+SRCS = $(addprefix src/, $(SRC))
 
 ############## PATH ##################
 
-OBJECTS	= $(SRC:.c=.o)
+OBJECTS	= $(SRCS:.c=.o)
 
 .PHONY: clean fclean re all
 
@@ -113,7 +114,7 @@ $(NAME): $(OBJECTS)
 	@echo "$(_GREEN)[OK] $(_BLUE)Compilation de $(_WHITE)$(NAME)"
 
 %.o: %.c
-	@$(CC) $(CFLAGS)  -o $@ -c $< && printf "$(_GREEN)[OK] $(_BLUE)Generation de $(_WHITE)%-50s\r" "$@" || \
+	@$(CC) $(CFLAGS) -I include -o $@ -c $< && printf "$(_GREEN)[OK] $(_BLUE)Generation de $(_WHITE)%-50s\r" "$@" || \
 		(echo "$(_RED)[ERREUR]$(_GRAY) Une est erreur est survenue sur $(_WHITE)$<$(_RED), $(_WHITE)$(NAME)$(_RED) non compilé(e)\n" && $(MAKE) fclean && exit 1)
 
 clean:
